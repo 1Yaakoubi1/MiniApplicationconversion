@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/montant"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtxtMonnaie"/>
+    <RadioGroup
+        android:id="@+id/groupdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtxtMonnaie"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/DBtnDinarEure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="euro->Dinar Tunisien"/>
+        <RadioButton
+            android:id="@+id/DBtnEurdin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Dinar->euro"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/groupdBtn"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="111dp"
+        android:text="@string/convert" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultat"
+        android:id="@+id/textResult"
+        android:layout_centerInParent="true"   />
+
+</RelativeLayout>
